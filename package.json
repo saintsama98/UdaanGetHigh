@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
     "@tabler/icons-react": "^3.31.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "firebase": "^11.6.1",
+    "framer-motion": "^12.9.2",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.503.0",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.9.2",
@@ -19,6 +23,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-element-to-jsx-string": "^17.0.1",
+    "react-leaflet": "^5.0.0",
     "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
