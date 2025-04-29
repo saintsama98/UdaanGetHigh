@@ -21,7 +21,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-white hover:opacity-[0.9] px-6 py-3 text-sm font-medium">
+        className="cursor-pointer text-gray-100 hover:bg-[#28282c] px-6 py-3 text-sm font-medium rounded-lg transition">
         {item}
       </motion.p>
       {active !== null && (
@@ -34,7 +34,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-[#113555] backdrop-blur-sm rounded-lg overflow-hidden border border-white/[0.2] shadow-xl">
+                className="bg-[#232329] backdrop-blur-sm rounded-lg overflow-hidden border border-[#232329] shadow-xl">
                 <motion.div
                   layout
                   className="w-max h-full p-4">
@@ -56,7 +56,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative border border-transparent bg-[#113555] shadow-input flex justify-center items-center space-x-12 px-12 py-3">
+      className="relative border border-[#232329] bg-[#232329] shadow-input flex justify-center items-center space-x-12 px-12 py-3">
       {children}
     </nav>
   );
@@ -77,10 +77,10 @@ export const ProductItem = ({
         alt={title}
         className="shrink-0 rounded-md shadow-2xl" />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-white">
+        <h4 className="text-xl font-bold mb-1 text-gray-100">
           {title}
         </h4>
-        <p className="text-neutral-300 text-sm max-w-[10rem]">
+        <p className="text-gray-400 text-sm max-w-[10rem]">
           {description}
         </p>
       </div>
@@ -95,7 +95,7 @@ export const HoveredLink = ({
   return (
     <a
       {...rest}
-      className="text-neutral-300 hover:text-white py-2 block">
+      className="text-gray-400 hover:text-gray-100 py-2 block transition">
       {children}
     </a>
   );
