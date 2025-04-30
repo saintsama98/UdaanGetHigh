@@ -47,6 +47,15 @@ export const TypewriterEffect = ({
                   {char}
                 </motion.span>
               ))}
+              {/* Add space after each word except the last one */}
+              {idx < wordsArray.length - 1 && (
+                <motion.span
+                  initial={{}}
+                  className="opacity-0 hidden w-4 inline-block"
+                >
+                  &nbsp;
+                </motion.span>
+              )}
             </div>
           );
         })}

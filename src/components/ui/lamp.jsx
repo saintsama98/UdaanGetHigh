@@ -2,22 +2,39 @@
 import React from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { TypewriterEffect } from "./typewriter-effect";
 
 export default function LampDemo() {
+  const words = [
+    {
+      text: "Your ",
+      className: "text-slate-300"
+    },
+    {
+      text: "Trusted ",
+      className: "text-slate-300"
+    },
+    {
+      text: "Digital ",
+      className: "text-slate-300"
+    },
+    {
+      text: "Registry ",
+      className: "text-cyan-500"
+    },
+    {
+      text: "Partner",
+      className: "text-slate-300"
+    }
+  ];
+
   return (
     <LampContainer>
-      <div className="mt-8">
-        <motion.h1
-          initial={{ opacity: 0.5, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-          Your Trusted Digital Registry Partner
-        </motion.h1>
+      <div className="mt-8 space-x-4">
+        <TypewriterEffect 
+          words={words}
+          className="text-center px-4"
+        />
       </div>
     </LampContainer>
   );

@@ -15,7 +15,8 @@ export const MenuItem = ({
   setActive,
   active,
   item,
-  children
+  children,
+  className
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
@@ -34,10 +35,10 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-[#232329] backdrop-blur-sm rounded-lg overflow-hidden border border-[#232329] shadow-xl">
+                className="bg-gradient-to-br from-[#5472E4] to-[#23AFD0] backdrop-blur-sm rounded-lg overflow-hidden border border-[#5472E4]/20 shadow-xl">
                 <motion.div
                   layout
-                  className="w-max h-full p-4">
+                  className={`w-max h-full p-4 ${className}`}>
                   {children}
                 </motion.div>
               </motion.div>
@@ -90,12 +91,13 @@ export const ProductItem = ({
 
 export const HoveredLink = ({
   children,
+  className,
   ...rest
 }) => {
   return (
     <a
       {...rest}
-      className="text-gray-400 hover:text-gray-100 py-2 block transition">
+      className={`text-white hover:text-white/90 py-2 block transition-all duration-200 ${className}`}>
       {children}
     </a>
   );
